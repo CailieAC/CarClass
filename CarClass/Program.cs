@@ -4,7 +4,6 @@ namespace CarClass
 {
     class Program
     {
-
         static void Main(string[] args)
         {
             Car car1 = new Car();
