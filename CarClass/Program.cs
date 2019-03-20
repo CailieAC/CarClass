@@ -26,7 +26,19 @@ namespace CarClass
     //The class should have a constructor that fills the car with a random amount of gas to start up to 13.0.
     class Car
     {
-        public float GasLevel { get; set; }
+        private float gasLevel;
+
+        public float GasLevel
+        {
+            get
+            {
+                return gasLevel;
+            }
+            set
+            {
+                gasLevel = value;
+            }
+        }
 
         public Car()
         {
@@ -36,16 +48,16 @@ namespace CarClass
 
         public void AddGas(float gasAmount)
         {
-            if (GasLevel + gasAmount > 13)
-                GasLevel = 13;
+            if (GasLevel + gasAmount > 13.0f)
+                GasLevel = 13.0f;
             else
                 GasLevel += gasAmount;
         }
 
         public float FillUp()
         {
-            float gasDifference = 13 - GasLevel;
-            GasLevel = 13;
+            float gasDifference = 13.0f - GasLevel;
+            GasLevel = 13.0f;
             return gasDifference;
         }
     }
